@@ -1,0 +1,35 @@
+
+<%- include('../partials/header') %>
+<main>
+    <hr>
+    <form action="/" method="GET">
+        <label>Filtruj po typie posta:</label>
+        <select name="type">
+            <option value="">Wszystkie</option>
+            <option value="artykul" <%= selectedType === 'artykul' ? 'selected' : '' %>>Artykuł</option>
+            <option value="poradnik" <%= selectedType === 'poradnik' ? 'selected' : '' %>>Poradnik</option>
+            <option value="news" <%= selectedType === 'news' ? 'selected' : '' %>>News</option>
+            <option value="recenzja" <%= selectedType === 'recenzja' ? 'selected' : '' %>>Recenzja</option>
+        </select>
+        <button type="submit">Filtruj</button>
+    </form>
+    <% if (typeof error !== 'undefined' && error) { %>
+        <div style="color:red"><%= error %></div>
+    <% } %>
+    <ul>
+        <% posts.forEach(post => { %>
+            <li>
+                <a href="/view/<%= post._id %>">
+                <b><%= post.title %></b> (<%= post.postType %>)</a>
+               <br>
+                
+                <a href="/edit/<%= post._id %>"><button>Edytuj</button></a>
+                <form action="/delete/<%= post._id %>" method="POST" style="display:inline;">
+                    <input type="password" name="password" placeholder="Hasło" required>
+                    <button type="submit">Usuń</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</main>
+<%- include('../partials/footer') %>

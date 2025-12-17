@@ -1,0 +1,28 @@
+
+<%- include('../partials/header') %>
+<main>
+    <hr>
+    <h2>Dodaj post</h2>
+    <% if (typeof error !== 'undefined' && error) { %>
+        <div style="color:red"><%= error %></div>
+    <% } %>
+    <form id="addForm" action="/add" method="POST">
+        <label>Tytuł:</label><br>
+        <input type="text" name="title" placeholder="Tytuł" required><br>
+        <label>Opis:</label><br>
+        <textarea name="description" placeholder="Opis" required></textarea><br>
+        <label>Typ posta:</label><br>
+        <select name="postType" required>
+            <option value="artykul">Artykuł</option>
+            <option value="poradnik">Poradnik</option>
+            <option value="news">News</option>
+            <option value="recenzja">Recenzja</option>
+        </select><br>
+        
+        <label>Hasło (min. 4 znaki):</label><br>
+        <input type="password" name="password" required><br>
+        <button type="submit">Dodaj</button>
+    </form>
+   
+</main>
+<%- include('../partials/footer') %>
