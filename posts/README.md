@@ -15,8 +15,8 @@ Prosta aplikacja webowa do zarządzania postami (artykuły, poradniki, newsy, re
 ## Instrukcja instalacji i uruchomienia
 1. **Klonuj repozytorium:**
    ```bash
-   git clone https://github.com/mecik111/4E217/
-   cd posts
+   git clone https://github.com/mecik111/E217/
+   cd E217/posts
    ```
 2. **Zainstaluj zależności:**
    ```bash
