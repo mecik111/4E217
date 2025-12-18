@@ -24,7 +24,7 @@ Prosta aplikacja webowa do zarządzania postami (artykuły, poradniki, newsy, re
    ```
 3. **Uruchom MongoDB** (przez Docker):
    ```bash
-   docker run -d --name posts -p 27017:27017 mongo:6.0
+   docker run -d --name posts -p 27017:27017 mongo:7.0
    ```
    Nazwa bazy: `posts`, port: `27017`
 4. **Uruchom aplikację:**

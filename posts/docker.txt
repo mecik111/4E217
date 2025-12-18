@@ -1,5 +1,5 @@
 Pobierz aplikacje Docker Desktop z https://www.docker.com/products/docker-desktop/
-Uruchom Docker Desktop i w terminalu wpisz docker run -d --name posts -p 27017:27017 mongo:6.0
+Uruchom Docker Desktop i w terminalu wpisz docker run -d --name posts -p 27017:27017 mongo:7.0
 Aby uruchomic: docker start posts
 nazwa bazy: posts
 Port w kontenerze: 27017
