@@ -4,4 +4,4 @@ Aby uruchomic: docker start posts
 nazwa bazy: posts
 Port w kontenerze: 27017
 Port na komputerze: 27017
-użyty silnik: mongo6.0
+użyty silnik: mongo7.0
